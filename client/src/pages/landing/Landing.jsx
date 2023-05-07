@@ -1,9 +1,12 @@
 import React from 'react'
+import Nav from '../Nav'
+import Products from './Products'
 
 const Landing = () => {
     return (
         <div>
-            <h1 className='bg-red-500 text-6xl'>Hello</h1>
+            <Nav/>
+            <Products/>
         </div>
     )
 }
