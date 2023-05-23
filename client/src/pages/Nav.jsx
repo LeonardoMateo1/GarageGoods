@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <div>
-        <nav className='flex justify-center w-full'>
+        <nav className='fixed flex justify-center w-full pb-6 shadow-sm bg-faded-white'>
             <ul className='flex w-[80%] h-full justify-between pt-7 items-center'>
                 <li className='flex items-center gap-3'>
                     <div className='items-center block mt-1 md:hidden'>

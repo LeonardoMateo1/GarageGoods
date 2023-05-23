@@ -1,12 +1,17 @@
 import React from 'react'
 import Nav from '../Nav'
-import Products from './Products'
 
 const Landing = () => {
     return (
         <div>
             <Nav/>
-            <Products/>
+            <div className='absolute px-20 bg-action rounded-xl py-80 left-40 -z-10'></div>
+            <div className='flex items-center justify-center w-full h-screen'>
+                <div className='flex flex-col items-center justify-center'>
+                    <h1 className='text-5xl font-bold '>Welcome to GarageGoods</h1>
+                    <p className='text-3xl'>Your Friendly Neighborhood Marketplace</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -30,7 +30,7 @@ module.exports = {
         "primary" : "#111111",
         "action" : "#FFCB74",
         "light-text" : "#71797E",
-        "" : "",
+        "faded-white" : "#F6F6F6",
         "" : "",
         "" : "",
       }
