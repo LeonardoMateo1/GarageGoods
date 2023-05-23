@@ -60,5 +60,15 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
+
+    getAllProducts: (req, res) => {
+        Product.find({}) 
+            .then((result) => {
+                res.json(result)
+            })
+            .catch((err) => {
+                res.status(404).json({msg:"Something went Wrong", error:err})
+            });
+    },
 }

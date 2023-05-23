@@ -14,24 +14,24 @@ const Nav = () => {
 
   return (
     <div>
-        <nav className='w-full flex justify-center'>
+        <nav className='flex justify-center w-full'>
             <ul className='flex w-[80%] h-full justify-between pt-7 items-center'>
                 <li className='flex items-center gap-3'>
-                    <div className='block md:hidden items-center mt-1'>
+                    <div className='items-center block mt-1 md:hidden'>
                         <button onClick={toggleNavMenu} className={`${isNavMenuOpen ? "hidden" : ""}`}><AiOutlineMenu/></button>
                         <button onClick={toggleNavMenu} className={`${isNavMenuOpen ? "" : "hidden"}`}><BiX/></button>
                     </div>
-                    <p className='text-3xl'>U<span className='text-red-500'>BUY</span>WE<span className='text-green-500'>SHIP</span></p>
+                    <p className='text-3xl font-bold'>GarageGoods</p>
                 </li>
-                <li className='md:w-[20rem] flex justify-between'>
-                    <div className='hidden md:flex gap-7'>
-                        <Link>About</Link>
-                        <Link>Help</Link>
+                <li className='md:w-[20rem] flex justify-between items-center'>
+                    <div className='hidden md:flex gap-7 text-light-text'>
+                        <Link className='hover:text-black'>About</Link>
+                        <Link className='hover:text-black'>Help</Link>
                     </div>
-                    <div className='hidden xs:flex gap-3'>
+                    <div className='hidden gap-3 px-4 py-2 shadow-lg rounded-xl xs:flex bg-action'>
                         <Link>Login</Link>
-                        <div className="hidden md:flex gap-3">
-                            <p>|</p>
+                        <div className="hidden gap-3 md:flex">
+                            <pc className='cursor-default'>|</pc>
                             <Link>Sign Up</Link>
                         </div>
                     </div>
