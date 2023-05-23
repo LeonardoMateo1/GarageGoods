@@ -24,7 +24,17 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        "alternate-bg" : "#2F2F2F",
+        "primary" : "#111111",
+        "action" : "#FFCB74",
+        "light-text" : "#71797E",
+        "" : "",
+        "" : "",
+        "" : "",
+      }
+    },
   },
   plugins: [],
 }
