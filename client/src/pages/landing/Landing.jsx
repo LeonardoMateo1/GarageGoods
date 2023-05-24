@@ -6,6 +6,7 @@ import smile from '../../assets/smile1.png'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import Testimonial from './Testimonial'
 import Footer from '../Footer'
+import Story from './Story'
 
 const Landing = () => {
     return (
@@ -38,6 +39,7 @@ const Landing = () => {
             <div className='absolute text-[35px] right-[15rem] top-[44rem] p-10 rounded-full shadow-lg -z-30'><AiOutlineArrowDown/></div>
             <Info/>
             <Testimonial/>
+            <Story/>
             <Footer/>
         </div>
     )
