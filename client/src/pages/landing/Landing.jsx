@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Nav from '../Nav'
 import Concept from './Concept'
 import smile from '../../assets/smile1.png'
+import { AiOutlineArrowDown } from 'react-icons/ai'
 
 const Landing = () => {
     return (
@@ -20,6 +21,7 @@ const Landing = () => {
                     <img src={smile} alt="" className='w-full h-[25rem] object-contain rounded-full bg-action' />
                 </div>
             </div>
+            <div className='absolute text-[35px] right-[15rem] top-[44rem] p-10 rounded-full shadow-lg'><AiOutlineArrowDown/></div>
             <Concept/>
         </div>
     )
