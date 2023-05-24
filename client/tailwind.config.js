@@ -31,7 +31,7 @@ module.exports = {
         "action" : "#FFCB74",
         "light-text" : "#71797E",
         "faded-white" : "#F6F6F6",
-        "" : "",
+        "platinum" : "#E5E4E2	",
         "" : "",
       }
     },
