@@ -21,7 +21,7 @@ const Nav = () => {
                         <button onClick={toggleNavMenu} className={`${isNavMenuOpen ? "hidden" : ""}`}><AiOutlineMenu/></button>
                         <button onClick={toggleNavMenu} className={`${isNavMenuOpen ? "" : "hidden"}`}><BiX/></button>
                     </div>
-                    <p className='text-3xl font-bold'>GarageGoods</p>
+                    <Link to='/' className='text-3xl font-bold'>GarageGoods</Link>
                 </li>
                 <li className='md:w-[20rem] flex justify-between items-center'>
                     <div className='hidden md:flex gap-7 text-light-text'>
@@ -29,10 +29,10 @@ const Nav = () => {
                         <Link className='hover:text-black'>Help</Link>
                     </div>
                     <div className='hidden gap-3 px-4 py-1 shadow-lg rounded-xl xs:flex bg-action'>
-                        <Link className='transition-transform duration-300 transform hover:scale-105'>Login</Link>
+                        <Link to='/Login' className='transition-transform duration-300 transform hover:scale-105'>Login</Link>
                         <div className="hidden gap-3 md:flex">
                             <p className='cursor-default'>|</p>
-                            <Link className='transition-transform duration-300 transform hover:scale-105'>Sign Up</Link>
+                            <Link to='/SignUp' className='transition-transform duration-300 transform hover:scale-105'>Sign Up</Link>
                         </div>
                     </div>
                 </li>
