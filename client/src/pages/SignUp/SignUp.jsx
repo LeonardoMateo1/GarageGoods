@@ -49,7 +49,7 @@ const SignUp = () => {
     const handleRegistration = (e) => {
         e.preventDefault()
         axios.post("http://localhost:8000/api/user/register", register, { withCredentials: true })
-            .then((res) => { console.log(res); navigate('/user/todos') })
+            .then((res) => { console.log(res); navigate('/') })
             .catch((err) => {
                 console.log(err);
                 setErrors(err.response.data.errors);
