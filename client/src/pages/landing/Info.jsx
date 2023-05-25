@@ -41,7 +41,7 @@ const Info = () => {
                     <h2 className='items-start text-4xl font-bold '>Power at your fingertips</h2>
                     <p className='mb-5'>Embark on a treasure hunt to discover rare finds, turn your treasures into cash with ease, and treasure the connections you make along the way.</p>
                     <div>
-                        <Link className='py-2 pr-5 text-2xl font-bold text-white rounded-lg pl-7 bg-action'><button>Sign Up</button></Link>
+                        <Link to='/SignUp' className='py-2 pr-5 text-2xl font-bold text-white rounded-lg pl-7 bg-action'><button>Sign Up</button></Link>
                     </div>
                 </div>
             </div>

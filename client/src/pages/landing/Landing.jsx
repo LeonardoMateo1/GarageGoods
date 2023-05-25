@@ -17,7 +17,7 @@ const Landing = () => {
                     <h1 className='text-6xl font-bold leading-[135%]'>Your Friendly Neighborhood Marketplace</h1>
                     <p className='mb-10 text-2xl font-medium'>Trade, Buy - All in One Place</p>
                     <div>
-                        <Link className='px-5 py-2 text-2xl font-bold text-white rounded-lg bg-action'><button>Start Here</button></Link>
+                        <Link to='/SignUp' className='px-5 py-2 text-2xl font-bold text-white rounded-lg bg-action'><button>Start Here</button></Link>
                     </div>
                 </div>
                 <div>
