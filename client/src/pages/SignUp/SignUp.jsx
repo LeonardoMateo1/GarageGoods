@@ -73,8 +73,19 @@ const SignUp = () => {
                             <button type='button' onClick={handleForwardMenu} className='p-2 rounded-md shadow-md bg-action'>Next</button>
                         </div>
                     </div>
-
-                    
+                    <div className={`${signUpMenu === 2 ? "flex" : "hidden" } flex-col gap-5 w-[80%] h-[85%] items-center justify-between`}>
+                        <div>
+                            <img src={SVG2} alt="signUp" className='object-cover w-full h-[15rem]' />
+                        </div>
+                        <div className='flex flex-col gap-4'>
+                            <input type="text" placeholder='Email' name='email' onChange={handleRegInputs}  className='py-2 pl-3 pr-10 border rounded-2xl' />
+                            <input type="text" placeholder='Confirm Email'  className='py-2 pl-3 pr-10 border rounded-2xl' />
+                        </div>
+                        <div className='flex gap-5'>
+                            <button type='button' onClick={handleBackwardMenu} className='p-2 rounded-md shadow-md'><RiArrowGoBackLine/></button>
+                            <button type='button' onClick={handleForwardMenu} className='p-2 rounded-md shadow-md bg-action'>Next</button>
+                        </div>
+                    </div>                    
                 </form>
             </div>
         </div>
