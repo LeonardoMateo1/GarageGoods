@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <div>
-        <nav className='flex justify-center w-full'>
+        <nav className='fixed z-30 flex justify-center w-full pb-6 bg-white shadow-sm'>
             <ul className='flex w-[80%] h-full justify-between pt-7 items-center'>
                 <li className='flex items-center gap-3'>
                     <div className='items-center block mt-1 md:hidden'>
@@ -28,11 +28,11 @@ const Nav = () => {
                         <Link className='hover:text-black'>About</Link>
                         <Link className='hover:text-black'>Help</Link>
                     </div>
-                    <div className='hidden gap-3 px-4 py-2 shadow-lg rounded-xl xs:flex bg-action'>
-                        <Link>Login</Link>
+                    <div className='hidden gap-3 px-4 py-1 shadow-lg rounded-xl xs:flex bg-action'>
+                        <Link className='transition-transform duration-300 transform hover:scale-105'>Login</Link>
                         <div className="hidden gap-3 md:flex">
-                            <pc className='cursor-default'>|</pc>
-                            <Link>Sign Up</Link>
+                            <p className='cursor-default'>|</p>
+                            <Link className='transition-transform duration-300 transform hover:scale-105'>Sign Up</Link>
                         </div>
                     </div>
                 </li>
