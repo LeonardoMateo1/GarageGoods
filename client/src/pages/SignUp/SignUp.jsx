@@ -41,7 +41,7 @@ const SignUp = () => {
     const handleRegistration = (e) => {
         e.preventDefault()
         axios.post("http://localhost:8000/api/user/register", register, { withCredentials: true })
-            .then((res) => { console.log(res); navigate('/') })
+            .then((res) => { console.log(res); navigate('/Dashboard') })
             .catch((err) => {
                 console.log(err);
                 setErrors(err.response.data.errors);

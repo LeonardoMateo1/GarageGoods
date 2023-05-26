@@ -20,7 +20,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault()
     axios.post("http://localhost:8000/api/user/login", login, { withCredentials: true })
-        .then((res) => { console.log(res); navigate('/') })
+        .then((res) => { console.log(res); navigate('/Dashboard') })
         .catch((err) => {
             console.log(err)
             setErrors(err.response.data);
@@ -48,7 +48,7 @@ const Login = () => {
                     <input type="text" onChange={handleLoginInputs} name='email' placeholder='Email' className='py-2 pl-3 pr-10 border rounded-2xl' />
                     <input type="password" onChange={handleLoginInputs} name='password' placeholder='Password' className='py-2 pl-3 pr-10 border rounded-2xl' />
                   </div>
-                  <input type="submit" value="Login"  className='w-full py-2 rounded-md shadow-md bg-action'/>
+                  <input type="submit" value="Login"  className='w-full py-2 rounded-md shadow-md cursor-pointer bg-action'/>
                 </div>
               </div>
             </form>
