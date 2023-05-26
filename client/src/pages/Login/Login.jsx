@@ -22,8 +22,12 @@ const Login = () => {
     axios.post("http://localhost:8000/api/user/login", login, { withCredentials: true })
         .then((res) => { console.log(res); navigate('/Dashboard') })
         .catch((err) => {
-            console.log(err)
-            setErrors(err.response.data);
+          console.log(err);
+          if (err.response && err.response.data && err.response.data.message) {
+            setErrors({ email: { message: err.response.data.message } });
+          } else {
+            setErrors({ email: { message: "An error occurred" } });
+          }
         })
   }
 
@@ -41,12 +45,17 @@ const Login = () => {
                 <div className='flex flex-col items-center justify-center'>
                   <h2 className='text-3xl font-semibold'>Log In</h2>
                   <img src={SVG1} alt="signUp" className='object-cover w-full h-[15rem]' />
+                  <div className="text-xl errors">{ errors.email ? errors.email.message : null}</div>
                 </div>
                 <div className='flex flex-col items-center justify-center w-full gap-4'>
                   <p className='text-xs'>New to GarageGoods <Link to='/SignUp' className='font-bold text-blue-500'>Sign Up for Free</Link></p>
                   <div className='flex flex-col items-center justify-center w-full gap-3'>
-                    <input type="text" onChange={handleLoginInputs} name='email' placeholder='Email' className='py-2 pl-3 pr-10 border rounded-2xl' />
-                    <input type="password" onChange={handleLoginInputs} name='password' placeholder='Password' className='py-2 pl-3 pr-10 border rounded-2xl' />
+                    <div>
+                      <input type="text" onChange={handleLoginInputs} name='email' placeholder='Email' className='py-2 pl-3 pr-10 border rounded-2xl' />
+                    </div>
+                    <div>
+                      <input type="password" onChange={handleLoginInputs} name='password' placeholder='Password' className='py-2 pl-3 pr-10 border rounded-2xl' />
+                    </div>
                   </div>
                   <input type="submit" value="Login"  className='w-full py-2 rounded-md shadow-md cursor-pointer bg-action'/>
                 </div>
