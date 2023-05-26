@@ -41,7 +41,7 @@ const Login = () => {
         <Nav/>
         <div className='flex items-center justify-center w-full h-screen'>
             <form onSubmit={handleLogin} className='w-[20rem] border rounded-xl h-[35rem] flex items-center justify-center shadow-md'>
-              <div className='flex-col flex gap-5 w-[80%] h-[85%] items-center justify-between'>
+              <div className='flex-col flex gap-5 w-[80%] h-[87%] items-center justify-between'>
                 <div className='flex flex-col items-center justify-center'>
                   <h2 className='text-3xl font-semibold'>Log In</h2>
                   <img src={SVG1} alt="signUp" className='object-cover w-full h-[15rem]' />
