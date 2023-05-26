@@ -28,19 +28,11 @@ const SignUp = () => {
     
     const handleForwardMenu = () => {
         setSignUpMenu(prevMenu => prevMenu < 3 ? prevMenu + 1 : prevMenu);
-        console.log(signUpMenu);  // Log the current state (may not reflect the latest update)
     };
     
     const handleBackwardMenu = () => {
         setSignUpMenu(prevMenu => prevMenu > 1 ? prevMenu - 1 : prevMenu);
-        console.log(signUpMenu);  // Log the current state (may not reflect the latest update)
     };
-
-    useEffect(() => {
-        console.log(signUpMenu); // Will log the updated value whenever signUpMenu changes.
-      }, [signUpMenu]);
-
-
 
     const handleRegInputs = (e) => {
         setState({ ...state, register: { ...state.register, [e.target.name]: e.target.value } })

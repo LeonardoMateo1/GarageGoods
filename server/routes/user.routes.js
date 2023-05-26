@@ -19,7 +19,7 @@ module.exports = (app) => {
     app.put("/api/product/:id/update", authenticate, ProductController.updateProduct)
     app.delete("/api/product/:id/delete", authenticate, ProductController.deleteProduct)
 
-    // Cart
+    // Cart 
     app.post("/api/cart/:productId", authenticate, CartController.addToCart) //
     app.delete("/api/cart/:itemId/delete", authenticate, CartController.removeFromCart) // Need To Fix
     app.get("/api/cart/:itemId", authenticate, CartController.getCartContents)//
