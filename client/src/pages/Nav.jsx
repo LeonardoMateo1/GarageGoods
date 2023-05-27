@@ -1,15 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {BiX} from 'react-icons/bi';
 
-const Nav = () => {
+const Nav = (props) => {
+    
 
     const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
 
     const toggleNavMenu = () => {
         setIsNavMenuOpen(!isNavMenuOpen)
     }
+
+
 
 
   return (

@@ -48,6 +48,21 @@ const UserSchema = new mongoose.Schema({
         }
         next();
     });
+
+    UserSchema.virtual('confirmEmail')
+    .get(function() {
+      return this._confirmEmail;
+    })
+    .set(function(value) {
+      this._confirmEmail = value;
+    });
+  
+  UserSchema.pre('validate', function(next) {
+    if (this.email !== this.confirmEmail) {
+      this.invalidate('confirmEmail', 'Email must match confirm Email');
+    }
+    next();
+  });
     
     UserSchema.pre('save', function(next) {
         bcrypt.hash(this.password, 10)
