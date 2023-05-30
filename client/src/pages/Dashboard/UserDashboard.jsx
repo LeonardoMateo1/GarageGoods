@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Nav from '../Nav'
 import Footer from '../Footer'
@@ -19,6 +20,16 @@ const UserDashboard = (props) => {
           .catch((err) => console.log(err));
   }, [])
 
+  const navigate = useNavigate()
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/user", {withCredentials:true})
+        .then(res => console.log(res))
+        .catch(err => {
+            console.log(err)
+            props.setAuthorized("You have to be logged in to view that page")
+            navigate("/")
+        })
+  }, [])
   
   return (
     <div>

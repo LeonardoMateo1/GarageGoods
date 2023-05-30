@@ -13,9 +13,6 @@ const Nav = (props) => {
         setIsNavMenuOpen(!isNavMenuOpen)
     }
 
-
-
-
   return (
     <div>
         <nav className='fixed z-30 flex justify-center w-full pb-6 bg-white shadow-sm'>
