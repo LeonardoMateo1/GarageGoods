@@ -15,7 +15,7 @@ module.exports = (app) => {
     app.get("/api/user/products", authenticate, UserController.getUserProducts)
     app.get("/api/product/:id", authenticate, ProductController.getOneProduct)
     app.get('/api/products/notuserproducts', authenticate, ProductController.getAllProductsExceptUserCreated)
-    app.get('/api/products/', ProductController.getAllProducts)
+    app.get('/api/products/',authenticate, ProductController.getAllProducts)
     app.put("/api/product/:id/update", authenticate, ProductController.updateProduct)
     app.delete("/api/product/:id/delete", authenticate, ProductController.deleteProduct)
 

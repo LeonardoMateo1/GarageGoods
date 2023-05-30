@@ -7,7 +7,7 @@ import SVG2 from '../../assets/SignUp_2_illustration.png';
 import SVG3 from '../../assets/SignUp_3_illustration.png';
 import {RiArrowGoBackLine} from 'react-icons/ri';
 
-const SignUp = () => {
+const SignUp = (props) => {
     
     const [state, setState] = useState({
       register: {
@@ -36,11 +36,13 @@ const SignUp = () => {
     };
 
     const handleRegInputs = (e) => {
+        props.setAuthorized("")
         setState({ ...state, register: { ...state.register, [e.target.name]: e.target.value } })
     }
 
     const handleRegistration = (e) => {
         e.preventDefault()
+        props.setAuthorized("")
         axios.post("http://localhost:8000/api/user/register", register, { withCredentials: true })
             .then((res) => { console.log(res); navigate('/Dashboard') })
             .catch((err) => {

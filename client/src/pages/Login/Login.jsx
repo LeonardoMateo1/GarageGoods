@@ -4,7 +4,7 @@ import axios from 'axios';
 import Nav from '../Nav'
 import SVG1 from '../../assets/Login_illustration.png'
 
-const Login = () => {
+const Login = (props) => {
 
   const [state, setState] = useState({
     login: {
@@ -32,6 +32,7 @@ const Login = () => {
   }
 
   const handleLoginInputs = (e) => {
+    props.setAuthorized("")
       setState({ ...state, login: { ...state.login, [e.target.name]: e.target.value } })
   }
   
