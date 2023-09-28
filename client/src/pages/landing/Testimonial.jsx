@@ -7,7 +7,7 @@ const Testimonial = () => {
   return (
     <div>
         <div className='w-full h-screen bg-gradient-to-r from-action to-yellow-600'>
-            <div className='flex items-center justify-center w-full h-full'>
+            <div className='flex items-center justify-center w-full h-full max-width'>
                 <div className='w-[80%] h-full flex justify-between items-center'>
                     <div className='flex-1'>
                         <h3 className='text-sm font-bold text-white'>Testimonials</h3>
