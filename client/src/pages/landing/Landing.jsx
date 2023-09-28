@@ -10,9 +10,9 @@ import Story from './Story'
 
 const Landing = () => {
     return (
-        <div>
+        <div className='relative'>
             <Nav/>
-            <div className='flex items-center justify-center w-full h-screen gap-3'>
+            <div className='w-full h-screen flex-between max-width'>
                 <div className='w-[40%] flex flex-col justify-center'>
                     <h1 className='text-6xl font-bold leading-[135%]'>Your Friendly Neighborhood Marketplace</h1>
                     <p className='mb-10 text-2xl font-medium'>Trade, Buy - All in One Place</p>
@@ -35,10 +35,10 @@ const Landing = () => {
                             <p className='text-lg font-bold'>+ 30k</p>
                             <p className='font-medium text-light-text '>Members</p>
                         </div>
+                        <div className='absolute text-[35px] p-10 rounded-full shadow-lg -z-30 right-[9rem] top-[45rem]'><AiOutlineArrowDown/></div>
                     </div>
                 </div>
             </div>
-            <div className='absolute text-[35px] right-[15rem] top-[44rem] p-10 rounded-full shadow-lg -z-30'><AiOutlineArrowDown/></div>
             <Info/>
             <Testimonial/>
             <Story/>

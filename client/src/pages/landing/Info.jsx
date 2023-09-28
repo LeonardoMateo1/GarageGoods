@@ -9,7 +9,7 @@ import {MdConnectWithoutContact} from 'react-icons/md';
 const Info = () => {
   return (
     <div>
-        <div className='flex items-center justify-center w-full h-screen'>
+        <div className='flex items-center justify-center w-full py-60 max-width'>
             <div className='w-[80%] h-full flex items-center justify-between'>
                 <div className='grid justify-between flex-1 grid-cols-2 gap-y-10'>
                     <div className='w-[15rem] h-full p-5 shadow-sm border rounded-md bg-white'>
