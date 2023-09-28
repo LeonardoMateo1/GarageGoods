@@ -14,9 +14,9 @@ const Nav = (props) => {
     }
 
   return (
-    <div>
-        <nav className='fixed z-30 flex justify-center w-full pb-6 bg-white shadow-sm'>
-            <ul className='flex w-[80%] h-full justify-between pt-7 items-center'>
+    <div className='fixed z-30 flex justify-center w-full bg-white shadow-sm'>
+        <nav className='flex justify-center w-full pb-6 max-width'>
+            <ul className='flex items-center justify-between w-full h-full pt-7'>
                 <li className='flex items-center gap-3'>
                     <div className='items-center block mt-1 md:hidden'>
                         <button onClick={toggleNavMenu} className={`${isNavMenuOpen ? "hidden" : ""}`}><AiOutlineMenu/></button>
