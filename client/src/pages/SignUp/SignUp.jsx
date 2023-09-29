@@ -10,14 +10,14 @@ import {RiArrowGoBackLine} from 'react-icons/ri';
 const SignUp = (props) => {
     
     const [state, setState] = useState({
-      register: {
-          firstName: "",
-          lastName: "",
-          email: "",
-          confirmEmail: "",
-          password: "",
-          confirmPassword: "",
-      }
+        register: {
+            firstName: "",
+            lastName: "",
+            email: "",
+            confirmEmail: "",
+            password: "",
+            confirmPassword: "",
+        }
     })
     
     const navigate = useNavigate();
